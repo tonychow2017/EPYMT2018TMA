@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Fira Sans';
+    src: 'FiraSans-Regular.ttf';
+}
+
+@font-face {
+    font-family: 'Fira Mono';
+    src: 'FiraMono-Regular.ttf'
+}
+
+body {
+    background: rgb(240,240,220);
+    color: rgb(100,80,80);
+    font-family: 'Fira Sans';
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 0.8;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 0.8;
+}
+
+h3 {
+    font-size: 30px;
+    line-height: 0.8;
+}
+
+h4 {
+    font-size: 25px;
+    line-height: 0.8;
+}
+
+p, div, ul, li, math {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+math {
+    font-family: 'Fira Mono'
+}
