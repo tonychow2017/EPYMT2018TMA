@@ -42,3 +42,11 @@ p, div, ul, li, math {
 math {
     font-family: 'Fira Mono'
 }
+
+.black_border {
+    border-color: rgb(100,80,80);
+    border-width: 1;
+    border-style: solid;
+    text-align: center;
+    display: inline-block;
+}
