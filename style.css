@@ -1,17 +1,21 @@
 @font-face {
     font-family: 'Fira Sans';
-    src: 'FiraSans-Regular.ttf';
+    src: '../EPYMT2018TMA/FiraSans-Regular.ttf';
 }
 
 @font-face {
     font-family: 'Fira Mono';
-    src: 'FiraMono-Regular.ttf'
+    src: '../EPYMT2018TMA/FiraMono-Regular.ttf'
 }
 
 body {
     background: rgb(240,240,220);
     color: rgb(100,80,80);
     font-family: 'Fira Sans';
+}
+
+a {
+    color: rgb(100,80,80);
 }
 
 h1 {
