@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Fira Sans';
-    src: '../EPYMT2018TMA/FiraSans-Regular.ttf';
+    src: url('../EPYMT2018TMA/FiraSans-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Fira Mono';
-    src: '../EPYMT2018TMA/FiraMono-Regular.ttf'
+    src: url('../EPYMT2018TMA/FiraMono-Regular.ttf');
 }
 
 body {
@@ -44,7 +44,7 @@ p, div, ul, li, math {
 }
 
 math {
-    font-family: 'Fira Mono'
+    font-family: 'Fira Mono';
 }
 
 .black_border {
