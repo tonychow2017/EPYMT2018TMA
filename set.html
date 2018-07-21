@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>EPYMT2018 TMA Tutorial (Set)</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <link red="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>EPYMT2018 Towards Modern Algebra</h1>
+    <h2>Set operations</h2>
+    <h3>Explanation</h3>
+    <p>This is a note on the notion of sets. You may want to skip this tutorial if you know a lot about set theory.<br>
+    As an introductory tutorial, I am not going to make this note too formal. If you want to look at some materials which are more precise, see <a href="https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory" target="_blank">here</a> (Wikipedia: ZFC).</p>
+    <h3>What is a set?</h3>
+    <p>You can imagine a set as one of the following:</p>
+    <ul>
+        <li>a collection (of object(s))</li>
+        <li>a container</li>
+        <li>an <a href="http://www.dictionary.com/browse/aggregate" target="_blank">aggregate</a></li>
+        <li>a <a href="http://www.dictionary.com/browse/heap" target="_blank">heap</a></li>
+        <li>an unordered list</li>
+        <li>a bag</li>
+    </ul>
+    <p>...etc. However, mathematicians aren't going to <i>define</i> the meaning of a <i>set</i> directly. Again, I mentioned in the class that:</p>
+    <ol><li>You already know what is the intuitive meaning of a set, and;</li>
+        <li>It is <i>hard</i> to define what a set actually is. If I define a set as a collection, then you may ask what is the definition of a collection. How should the "definition chain" end?</li></ol>
+    <p>A simpler way is to assume that you understand what a set actually is.</p>
+    <h3>Belongs to</h3>
+    <p>When we have a collection, we want to describe whether an object is <i>in</i> that collection, or isn't.<br>
+    We use the symbol <math><mo>&#x2208;</mo></math> to denote the notion of <i>belongs to</i>. For example, suppose <math><mi>S</mi></math> is a set. Now,</p>
+    <ul><li><math><mrow><mi>x</mi><mo>&#x2208;</mo><mi>S</mi></mrow></math> means that <math><mi>x</mi></math> is an element of <math><mi>S</mi></math>, or we say <math><mi>x</mi></math> is in <math><mi>S</mi></math>.</li>
+        <li><math><mrow><mi>x</mi><mo>&#x2209;</mo><mi>S</mi></mrow></math> describes that <math><mi>x</mi></math> is not an element of <math><mi>S</mi></math>. (The stroke has the same meaning as that inside the symbol <math><mo>&#x2260;</mo></math>).</li></ul>
+    <h3>Constructions</h3>
+    <p>There are several ways to construct a set, each of which has its own pitfalls.</p>
+    <ol><li>Construct a set by collecting finite object(s). You can use the following notation (called the <i>builder notation</i>):<br>
+        <math><mrow><mi>S</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mtext>...</mtext><mo>,</mo><mi>z</mi><mo>}</mo></mrow></math> where <math><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mtext>&nbsp;and&nbsp;</mtext><mi>z</mi></mrow></math> are objects.<br>
+        WARNING: while it would be legitimate to collect finite objects together, it is dangerous if you are going to collect infinite objects. For example, it would be <i>incorrect</i> (I will explain this point in class later) if you let<br>
+        <p style="text-indent: 2em;"><math><mrow><mi>S</mi><mo>=</mo><mo>{</mo><mn>0.1</mn><mo>,</mo><mn>0.2</mn><mo>,</mo><mn>0.3</mn><mo>,</mo><mtext>...</mtext><mo>,</mo><mn>0.01</mn><mo>,</mo><mn>0.02</mn><mo>,</mo><mtext>...</mtext><mo>}</mo></mrow></math></p>
+        and claim that <math><mi>S</mi></math> is the set of all real numbers between <math><mn>0</mn></math> and <math><mn>1</mn></math>.</li>
+    <li>Construct a set by restriction. Suppose I have a set <math><mi>S</mi></math>.<br>
+        We can construct a set, say, <math><mi>T</mi></math>, by collecting element(s) in <math><mi>S</mi></math> satisfying some property, say, <math><mi>p</mi><mo>(</mo><mi>x</mi><mo>)</mo></math>, by a restrction<br>
+        <p style="text-indent: 2em;"><math><mrow><mi>T</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>&#x2208;</mo><mi>S</mi><mo>:</mo><mi>p</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>}</mo></mrow></math></p>
+        As an example, let
+        <p style="text-indent: 2em;"><math><mrow><mi>S</mi><mo>=</mo><mo>{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>}</mo></mrow></math></p>
+        . Then<br>
+        <p style="text-indent: 2em;"><math><mrow><mi>T</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>&#x2208;</mo><mi>S</mi><mo>:</mo><mi>x</mi><mo>></mo><mn>2</mn><mo>}</mo><mo>=</mo><mo>{</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>}</mo></mrow></math></p>
+        . The colon <math><mo>:</mo></math> is read as <i>such that</i>. Some people prefer <math><mo>|</mo></math> instead of <math><mo>:</mo></math>. Therefore, you may also write
+        <p style="text-indent: 2em;"><math><mrow><mi>T</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>&#x2208;</mo><mi>S</mi><mtext>&nbsp;</mtext><mo>|</mo><mtext>&nbsp;</mtext><mi>x</mi><mo>></mo><mn>2</mn><mo>}</mo></mrow></math><br>.<br>
+        WARNING: You can do so only when you know a set <math><mi>S</mi></math>. You are not allowed to collect <i>arbitrary</i> objects satisfying some properties. Otherwise, the construction may lead to serious consequences. For example, it is wrong to write</p>
+        <p style="text-indent: 2em;"><math><mi>T</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>:</mo><mi>x</mi><mo>></mo><mn>2</mn><mo>}</mo></math><br>
+        .</p>
+    </li>
+    <li>For the time being you can assume that some sets exist. Indeed, you have to construct them and justify their existences later.<br>
+        <ul><li><math><mi>&#x211D;</mi></math>: the set of all real numbers</li>
+            <li><math><mi>&#x2124;</mi></math>: the set of all integers</li>
+            <li><math><mi>&#x2115;</mi></math>: the set of all natural numbers</li>
+            <li><math><mi>&#x211A;</mi></math>: the set of all rational numbers</li>
+            <li><math><mi>&#x2102;</mi></math>: the set of all complex numbers</li></ul></li>
+    </ol>
+    <p>A final note: the meaning of <i>natural numbers</i> is ambiguous. First, <math><mn>0</mn></math> may or may not be a natural number, depending on the definition of the <i>author</i>. Also, there are many ways to define what natural numbers are.</p>
+    <h4>Example</h4>
+    <ul><li>
+        <math><mrow><mi>S</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>&#x2208;</mo><mi>&#x2115;</mi><mo>:</mo><mi>x</mi><mo>&lt;</mo><mn>5</mn><mo>}</mo><mo>=</mo><mo>{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>}</mo></mrow></math></li>
+        <li><math><mrow><mi>I</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>&#x2208;</mo><mi>&#x211D;</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&le;</mo><mn>3</mn><mo>}</mo><mo>=</mo><mo>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>]</mo></mrow></math> (Do you know what an <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)" target="_blank">interval</a> means?)</li></ul>
+    
+    <h3>Equality and Subset Relation</h3>
+    <h4>Meanings</h4>
+    <p>Given two sets <math><mi>A</mi></math> and <math><mi>B</mi></math>, we say that</p>
+    <ul><li><math><mi>A</mi></math> is a <i>subset</i> of <math><mi>B</mi></math> if every element in <math><mi>A</mi></math> is an element in <math><mi>B</mi></math>.<br>
+        Notation: <math><mrow><mi>A</mi><mo>&#x2282;</mo><mi>B</mi></mrow></math>.<br>
+        We can also say that <math><mi>B</mi></math> is a <i>superset</i> of <math><mi>A</mi></math>.</li>
+        <li><math><mi>A</mi></math> and <math><mi>B</mi></math> are <i>equal</i> if <math><mi>A</mi></math> is a subset of <math><mi>B</mi></math> and <math><mi>B</mi></math> is a subset of <math><mi>A</mi></math>.<br>
+        Notation: <math><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>.<br>
+        In other words, the sets <math><mi>A</mi></math> and <math><mi>B</mi></math> are equal if every element in <math><mi>A</mi></math> is an element in <math><mi>B</mi></math>, and every element in <math><mi>B</mi></math> is an element in <math><mi>A</mi></math>.</li></ul>
+    <h4>Consequence?</h4>
+    <p>If we <a href="http://www.dictionary.com/browse/portray" target="_blank">portray</a> the meaning of equality in this way, we mean that</p>
+    <ol><li>a set is <i>unordered</i>. That means<br>
+        <math><mrow><mo>{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>}</mo><mo>=</mo><mo>{</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>}</mo></mrow></math>.</li>
+    <li>a set contains no duplicate element. Even if it does, it has no extra meaning. So,<br>
+        <math><mrow><mo>{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>}</mo><mo>=</mo><mo>{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>}</mo></mrow></math>.</li></ol>
+    <h4>Alternative notations</h4>
+    <p>Some people may also use the symbol <math><mo>&#x2286;</mo></math> to denote subset relations. If you want to emphasize that the subset is not equal to the superset, use <math><mo>&#x228A;</mo></math>.</p>
+    
+    <h3>Operations</h3>
+    <h4>Union</h4>
+    <p>We can create a <i>larger</i> (actually, not necessarily larger, but you can think in this way) set by collecting the elements in two sets.</p>
+    <p>Suppose <math><mi>A</mi></math> and <math><mi>B</mi></math> are two sets. We write</p>
+    <p style="margin-left: 2em;"><math><mrow><mi>A</mi><mo>&#x222a;</mo><mi>B</mi></mrow></math> </p>
+    <p>to denote this set. You can assume that this set must exist. The larger set is called the <i>union</i> of <math><mi>A</mi></math> and <math><mi>B</mi></math>.</p>
+    <h4>Intersection</h4>
+    <p>Given two sets, we can create a <i>smaller</i> (again, not necessarily but usually) set by taking out the elements which are in both sets.</p>
+    <p>Suppose <math><mi>A</mi></math> and <math><mi>B</mi></math> and two sets. We write</p>
+    <p style="margin-left: 2em;"><math><mrow><mi>A</mi><mo>&#x2229;</mo><mi>B</mi></mrow></math></p>
+    <p>to denote the smaller set. The smaller set is called the <i>intersection</i> of <math><mi>A</mi></math> and <math><mi>B</mi></math>.<br>
+    The intersection must exist, for, we can use the builder notation to construct the intersection</p>
+    <p style="margin-left: 2em;"><math><mrow><mi>A</mi><mo>&#x2229;</mo><mi>B</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>x</mi><mo>&#x2208;</mo><mi>B</mi><mo>}</mo></mrow></math></p>
+    <p>.</p>
+    <h4>Complement</h4>
+    <p>We can remove some elements from a set by taking <i>complement</i>. Denote</p>
+    <p style="margin-left: 2em;"><math><mrow><mi>A</mi><mo>\</mo><mi>B</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>x</mi><mo>&#x2209;</mo><mi>B</mi><mo>}</mo></mrow></math></p>
+    <p>This is a set which contains element(s) in <math><mi>A</mi></math> which are not in <math><mi>B</mi></math>.</p>
+    </body>
+</html>
