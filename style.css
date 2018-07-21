@@ -1,13 +1,3 @@
-@font-face {
-    font-family: 'Fira Sans';
-    src: url('../EPYMT2018TMA/FiraSans-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Fira Mono';
-    src: url('../EPYMT2018TMA/FiraMono-Regular.ttf');
-}
-
 body {
     background: rgb(240,240,220);
     color: rgb(100,80,80);
